@@ -6,6 +6,9 @@ dist/
 build/
 .next/
 
+# env files
+*env.*
+
 # IDE and OS specific files
 .DS_Store
 .idea/
