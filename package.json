@@ -1,0 +1,26 @@
+{
+    "name": "portfolio-website",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "pretty": "prettier --log-level warn --write .",
+        "docker:build": "docker build -t portfolio-website .",
+        "docker:run": "docker run -p 3000:3000 portfolio-website"
+    },
+    "dependencies": {
+        "next": "^13.4.12",
+        "prettier": "^3.5.3",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "@types/node": "^20.4.5",
+        "@types/react": "^18.2.18",
+        "@types/react-dom": "^18.2.7",
+        "typescript": "^5.1.6"
+    }
+}
