@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+.next/
+
+# IDE and OS specific files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
