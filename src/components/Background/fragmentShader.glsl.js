@@ -1,7 +1,6 @@
 export default /* glsl */`
 uniform vec2 u_resolution;
 uniform float u_time;
-uniform float u_offset;
 
 vec2 randomGradient(vec2 p) {
 	p = p + 0.1;
@@ -11,7 +10,7 @@ vec2 randomGradient(vec2 p) {
 	gradient = sin(gradient);
 	gradient = gradient * 321.1234;
 
-	gradient = sin(gradient + u_time + (u_offset * 0.2));
+	gradient = sin(gradient + u_time);
 	return gradient;
 }
 
