@@ -1,6 +1,7 @@
 import Head from 'next/head'
-import NavBar from '@/components/NavBar'
-import TechStack from '@/components/TechStack'
+import NavBar from '@/components/Navbar/NavBar'
+import TechStack from '@/components/TechStack/TechStack'
+import Background from '@/components/Background/Background'
 
 export default function Home() {
     return (
@@ -11,6 +12,7 @@ export default function Home() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
+            <Background />
             <main key="main" id="main">
                 {/* panel 1 */}
                 <div className="landing panel" id="home">
@@ -25,19 +27,18 @@ export default function Home() {
                                     }}>
                                     Hunter
                                 </span>
+                                
                             </p>
                             <p className="landing-subtitle">a full stack engineer</p>
                         </div>
-                        <img
-                            src="/headshot-scaled.png"
-                            alt="headshot"
-                            style={{
-                                height: '25rem',
-                                borderRadius: '50%',
-                                boxShadow: '0 0rem 4rem rgba(0, 0, 0, 0.1)',
-                                backgroundColor: "white"
-                            }}
-                        />
+                        <div className="headshot-bg">
+                            <img
+                                src="/headshot-scaled.png"
+                                alt="headshot"
+                                style={{height: '25rem'}}
+                            />
+                        </div>
+                        
                     </div>
                 </div>
                 <NavBar />
