@@ -2,7 +2,8 @@
     --max-width: 1100px;
     --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono', 'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro', 'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
     --font-sans: 'Verdana', 'SF Mono', 'Roboto Mono', 'Source Code Pro', monospace;
-    --accent-color: blue;
+    --accent-color: #758bfd;
+    --bg-color: #f6f7ff;
     color-scheme: light dark;
 }
 
@@ -10,6 +11,12 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 html {
@@ -33,6 +40,7 @@ body {
 a {
     color: inherit;
     text-decoration: none;
+    
 }
 
 p {
@@ -63,11 +71,18 @@ a.anchor {
     font-weight: normal;
 }
 
+.headshot-bg {
+    height: 25rem;
+    width: 25rem;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 4rem rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1rem);
+}
+
 .panel {
-    /* border-top: 0.25rem solid var(--accent-color); */
     min-height: calc(100vh - 3rem);
     padding: 0rem 1rem 5rem 1rem;
-    /* background-color: var(--accent-color); */
 }
 
 .panel-title {
@@ -97,6 +112,8 @@ a.anchor {
     box-shadow: 0 0rem 4rem rgba(0, 0, 0, 0.1);
     border-radius: 1rem;
     padding: 2rem;
+    background-color: var(--bg-color);
+    /* backdrop-filter: blur(1rem); */
 }
 
 .footer {
