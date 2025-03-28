@@ -56,7 +56,7 @@ export default function Background() {
     }
 
     return (
-        <div id="bg" style={{width: "100%", height: "100%", position: "absolute", top: "0", left: "0", zIndex: "-1"}}>
+        <div id="bg" style={{width: "100vw", height: "100vh", position: "fixed", top: "0", left: "0", zIndex: "-1"}}>
             <Canvas>
                 <ambientLight intensity={4}/>
                 <Plane />
