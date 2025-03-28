@@ -10,6 +10,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 
 export default function Background() {
     const u_time = useRef(Math.random() * 100);
+    const u_seed = useRef(Math.random());
     
     function Plane() {
         const matRef = useRef<THREE.ShaderMaterial>(null!);
@@ -26,6 +27,10 @@ export default function Background() {
             u_offset: {
                 type: 'float',
                 value: 0
+            },
+            u_seed: {
+                type: 'float',
+                value: u_seed.current
             }
         }
 

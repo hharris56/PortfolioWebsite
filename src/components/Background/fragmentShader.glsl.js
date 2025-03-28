@@ -2,9 +2,11 @@ export default /* glsl */`
 uniform vec2 u_resolution;
 uniform float u_time;
 uniform float u_offset;
+uniform float u_seed;
 
 vec2 randomGradient(vec2 p) {
-	p = p + 0.1;
+	// original seed is 0.1
+	p = p + u_seed;
 	
 	// gradient 1
 	float x = dot(p, vec2(123.4, 234.5));
@@ -12,25 +14,24 @@ vec2 randomGradient(vec2 p) {
 	vec2 gradient = vec2(x, y);
 	gradient = sin(gradient);
 	gradient = gradient * 321.1234;
+	gradient = sin(gradient + u_time + (u_offset * 0.2));
 
+	// optional harmonics
 	// gradient 2
 	// float x2 = dot(p - 0.2, vec2(543.2, 432.1));
 	// float y2 = dot(p - 0.2, vec2(123.4, 234.5));
 	// vec2 gradient2 = vec2(y2, x2);
 	// gradient2 = sin(gradient2);
 	// gradient2 = gradient2 * 123.4567;
+	// gradient = gradient + sin(gradient2 + (u_time * 0.8765));
 
-	// // gradient 3
+	// gradient 3
 	// float x3 = dot(p - 0.1, vec2(987.6, 123.4));
 	// float y3 = dot(p - 0.1, vec2(543.2, 678.9));
 	// vec2 gradient3 = vec2(x3, y3);
 	// gradient3 = sin(gradient3);
 	// gradient3 = gradient3 * 9988.7654;
-
-	gradient = sin(gradient + u_time + (u_offset * 0.2)) ;
-	// + sin(gradient2 + (u_time * 0.8765))
-	// + sin(gradient3 + (u_time * 2.1));
-	// gradient = normalize(gradient);
+	// gradient = gradient + sin(gradient3 + (u_time * 2.1));
 
 	return gradient;
 }
