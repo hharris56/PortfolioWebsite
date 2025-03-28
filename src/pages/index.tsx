@@ -16,7 +16,7 @@ export default function Home() {
             <main key="main" id="main">
                 {/* panel 1 */}
                 <div className="landing panel" id="home">
-                    <div className="panel-content" style={{ alignItems: 'center' }}>
+                    <div className="panel-content landing-panel-content">
                         <div>
                             <p className="landing-title">
                                 Hello, I'm{' '}
@@ -35,7 +35,7 @@ export default function Home() {
                             <img
                                 src="/headshot-scaled.png"
                                 alt="headshot"
-                                style={{height: '25rem'}}
+                                className='headshot-img'
                             />
                         </div>
                         
@@ -47,14 +47,14 @@ export default function Home() {
                     <a className="anchor" id="about"></a>
                     <div className="panel-title">About</div>
                     <div className="panel-content">
-                        <div key="description" style={{ width: '35%' }} className="pane">
-                            <h2 className="panel-header">Who I Am</h2>
+                        <div key="description" style={{ width: '30rem' }} className="pane">
+                            <h2 className="pane-header">Who I Am</h2>
                             <p style={{ textAlign: 'justify' }}>An engineer, a creative, and a passionate believer in the mantra 'learn by doing'; I'm the kind of person who loves tackling problems head on. A large portion of my technical experience lies in web development, but I've also worked with embedded systems, graphic libraries, and game development. Outside the office I enjoy reading, hiking, snowboarding and making music. Ask me about my most recent album!</p>
                         </div>
-                        <div key="skills" style={{ width: '35%' }} className="pane">
-                            <h2 className="panel-header">What I Do</h2>
+                        <div key="skills" style={{ width: '30rem' }} className="pane">
+                            <h2 className="pane-header">What I Do</h2>
                             <TechStack icons={['/icons/nextjs-icon.svg', '/icons/react-js-icon.svg', '/icons/typescript-icon.svg', '/icons/python-icon.svg', '/icons/microsoft-dot-net-icon.svg', '/icons/sql-icon.svg']} />
-                            <h2 className="panel-header" style={{ margin: '2rem 0rem' }}>
+                            <h2 className="pane-header" style={{ margin: '2rem 0rem' }}>
                                 What I Use
                             </h2>
                             <TechStack icons={['/icons/git-icon.svg', '/icons/docker-icon.svg', '/icons/jest-js-icon.svg']} />
@@ -66,7 +66,7 @@ export default function Home() {
                     <a className="anchor" id="projects"></a>
                     <div className="panel-title">Projects</div>
                     <div className="panel-content">
-                        <div key="projects" style={{ width: '50%', textAlign: 'center' }} className="pane">
+                        <div key="projects" style={{ width: '80rem', textAlign: 'center' }} className="pane">
                             coming soon...
                         </div>
                     </div>
@@ -76,8 +76,8 @@ export default function Home() {
                     <a className="anchor" id="contact"></a>
                     <div className="panel-title">Contact</div>
                     <div className="panel-content">
-                        <div key="connect" style={{ width: '50%' }} className="pane">
-                            <h2 className="panel-header">Let's Connect</h2>
+                        <div key="connect" style={{ width: '40rem' }} className="pane">
+                            <h2 className="pane-header">Let's Connect</h2>
                             <p>You can find me on any of the following platforms:</p>
                             <div
                                 style={{
@@ -110,7 +110,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div key="footer" className="footer">
-                    <a href="#home" className='panel-header' style={{marginBottom: "1rem"}}>Home</a>
+                    <a href="#home" className='pane-header' style={{marginBottom: "1rem"}}>Home</a>
                     <p>© 2025 Hunter Harris</p>
                 </div>
             </main>
