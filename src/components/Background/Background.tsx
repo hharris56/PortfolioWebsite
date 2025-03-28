@@ -10,7 +10,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 
 export default function Background() {
     const u_time = useRef(Math.random() * 100);
-    const u_offset = useRef(window.scrollY);
+    const u_offset = useRef(0);
     const u_momentum = useRef(1);
     
     function Plane() {
