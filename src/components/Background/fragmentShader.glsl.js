@@ -5,13 +5,33 @@ uniform float u_offset;
 
 vec2 randomGradient(vec2 p) {
 	p = p + 0.1;
+	
+	// gradient 1
 	float x = dot(p, vec2(123.4, 234.5));
 	float y = dot(p, vec2(234.5, 345.6));
 	vec2 gradient = vec2(x, y);
 	gradient = sin(gradient);
 	gradient = gradient * 321.1234;
 
-	gradient = sin(gradient + u_time + (u_offset * 0.2));
+	// gradient 2
+	// float x2 = dot(p - 0.2, vec2(543.2, 432.1));
+	// float y2 = dot(p - 0.2, vec2(123.4, 234.5));
+	// vec2 gradient2 = vec2(y2, x2);
+	// gradient2 = sin(gradient2);
+	// gradient2 = gradient2 * 123.4567;
+
+	// // gradient 3
+	// float x3 = dot(p - 0.1, vec2(987.6, 123.4));
+	// float y3 = dot(p - 0.1, vec2(543.2, 678.9));
+	// vec2 gradient3 = vec2(x3, y3);
+	// gradient3 = sin(gradient3);
+	// gradient3 = gradient3 * 9988.7654;
+
+	gradient = sin(gradient + u_time + (u_offset * 0.2)) ;
+	// + sin(gradient2 + (u_time * 0.8765))
+	// + sin(gradient3 + (u_time * 2.1));
+	// gradient = normalize(gradient);
+
 	return gradient;
 }
 
@@ -77,9 +97,11 @@ void main() {
 		color = vec3(0.9647058823529412, 0.9686274509803922, 1);
 	} 
 	else {
-		// color = vec3(0.90196078431);
-		// color = vec3(0.6823529411764706, 0.7215686274509804, 0.996078431372549);
-		color = vec3(0.8549019607843137, 0.8705882352941177, 1);
+		vec3 cornflower = vec3(0.4588235294117647, 0.5450980392156862, 0.9921568627450981);
+		vec3 lavendar = vec3(0.8549019607843137, 0.8705882352941177, 1.0);
+		vec3 ghost = vec3(0.9647058823529412, 0.9686274509803922, 1.0);
+		perlin = perlin * 1.5;
+		color = mix(cornflower, ghost, perlin);
 	}
 	// color = vec3(perlin);
 
