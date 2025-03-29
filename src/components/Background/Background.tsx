@@ -10,6 +10,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 
 export default function Background() {
     const u_time = useRef(Math.random() * 100);
+    const u_seed = useRef(Math.random());
     const u_offset = useRef(0);
     const u_momentum = useRef(1);
     
@@ -24,6 +25,14 @@ export default function Background() {
             u_time: {
                 type: 'float',
                 value: u_time.current
+            },
+            u_offset: {
+                type: 'float',
+                value: 0
+            },
+            u_seed: {
+                type: 'float',
+                value: u_seed.current
             }
         }
 
@@ -57,7 +66,7 @@ export default function Background() {
     }
 
     return (
-        <div id="bg" style={{width: "100%", height: "100%", position: "absolute", top: "0", left: "0", zIndex: "-1"}}>
+        <div id="bg" style={{width: "100vw", height: "100vh", position: "fixed", top: "0", left: "0", zIndex: "-1"}}>
             <Canvas>
                 <ambientLight intensity={4}/>
                 <Plane />
