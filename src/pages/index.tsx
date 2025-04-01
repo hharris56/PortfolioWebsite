@@ -52,7 +52,7 @@ export default function Home() {
                 An engineer, a creative, and a passionate believer in the mantra
                 'learn by doing'; I'm the kind of person who loves tackling
                 problems head on. A large portion of my technical experience
-                lies in web development, but I've also worked on computer
+                lies in web development, but I also work on computer
                 graphics, embedded systems, and game development. Outside the
                 office I enjoy reading, hiking, snow sports and making music.
                 Ask me about my most recent album!
@@ -126,9 +126,9 @@ export default function Home() {
                   }}
                 />
                 <p style={{ width: '30rem', maxWidth: '100%' }}>
-                  I've wanted to try out tailwind for a while and figured a
-                  small-scale dynamically rendered web app like this would be a
-                  good testing ground.
+                  I've been wanting to try out tailwind for a while now and 
+                  figured a small-scale dynamically-rendered web app like this 
+                  would be make for a good testing ground.
                 </p>
               </div>
               <div className="project-tool-container">
