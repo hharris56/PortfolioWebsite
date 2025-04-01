@@ -1,14 +1,14 @@
 .tech-stack {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .tech-stack-icon {
-    width: 5rem;
-    height: 5rem;
-    max-width: 20%;
-    max-height: 20%;
-    margin: 1rem;
+  width: 5rem;
+  height: 5rem;
+  max-width: 20%;
+  max-height: 20%;
+  margin: 1rem;
 }

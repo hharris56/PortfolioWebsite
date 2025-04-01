@@ -1,31 +1,31 @@
 {
-    "name": "portfolio-website",
-    "version": "0.1.0",
-    "private": true,
-    "scripts": {
-        "dev": "next dev",
-        "build": "next build",
-        "start": "next start",
-        "lint": "next lint",
-        "pretty": "prettier --log-level warn --write .",
-        "docker:build": "docker build -t portfolio-website .",
-        "docker:run": "docker run -p 3000:3000 portfolio-website"
-    },
-    "dependencies": {
-        "@react-three/drei": "^9.105.4",
-        "@react-three/fiber": "^8.16.2",
-        "@react-three/postprocessing": "^2.16.2",
-        "next": "14.2.2",
-        "prettier": "^3.5.3",
-        "react": "^18.2.0",
-        "react-dom": "^18",
-        "three": "^0.163.0"
-    },
-    "devDependencies": {
-        "@types/node": "^20.4.5",
-        "@types/react": "^18.2.18",
-        "@types/react-dom": "^18.2.7",
-        "@types/three": "^0.174.0",
-        "typescript": "^5.1.6"
-    }
+  "name": "portfolio-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "pretty": "prettier --log-level warn --write .",
+    "docker:build": "docker build -t portfolio-website .",
+    "docker:run": "docker run -p 3000:3000 portfolio-website"
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.105.4",
+    "@react-three/fiber": "^8.16.2",
+    "@react-three/postprocessing": "^2.16.2",
+    "next": "14.2.2",
+    "prettier": "^3.5.3",
+    "react": "^18.2.0",
+    "react-dom": "^18",
+    "three": "^0.163.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.5",
+    "@types/react": "^18.2.18",
+    "@types/react-dom": "^18.2.7",
+    "@types/three": "^0.174.0",
+    "typescript": "^5.1.6"
+  }
 }
