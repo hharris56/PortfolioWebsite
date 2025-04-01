@@ -2,6 +2,7 @@ import Head from 'next/head'
 import NavBar from '@/components/Navbar/NavBar'
 import TechStack from '@/components/TechStack/TechStack'
 import Background from '@/components/Background/Background'
+import ExternalLink from '@/components/externalLink'
 
 export default function Home() {
     return (
@@ -49,7 +50,7 @@ export default function Home() {
                     <div className="panel-content">
                         <div key="description" style={{ width: '30rem' }} className="pane">
                             <h2 className="pane-header">Who I Am</h2>
-                            <p style={{ textAlign: 'justify' }}>An engineer, a creative, and a passionate believer in the mantra 'learn by doing'; I'm the kind of person who loves tackling problems head on. A large portion of my technical experience lies in web development, but I've also worked with embedded systems, graphic libraries, and game development. Outside the office I enjoy reading, hiking, snowboarding and making music. Ask me about my most recent album!</p>
+                            <p style={{ textAlign: 'justify' }}>An engineer, a creative, and a passionate believer in the mantra 'learn by doing'; I'm the kind of person who loves tackling problems head on. A large portion of my technical experience lies in web development, but I've also worked on computer graphics, embedded systems, and game development. Outside the office I enjoy reading, hiking, snow sports and making music. Ask me about my most recent album!</p>
                         </div>
                         <div key="skills" style={{ width: '30rem' }} className="pane">
                             <h2 className="pane-header">What I Do</h2>
@@ -66,8 +67,29 @@ export default function Home() {
                     <a className="anchor" id="projects"></a>
                     <div className="panel-title">Projects</div>
                     <div className="panel-content">
-                        <div key="projects" style={{ width: '80rem', textAlign: 'center' }} className="pane">
-                            coming soon...
+                        <div key="mini-pixel" style={{ width: '60rem', textAlign: 'center' }} className="pane">
+                            <div className='project-info'>
+                                <div style={{marginBottom: "0.5rem"}}>
+                                    <h1>Mini Pixel</h1>
+                                    <i>March 2025</i>
+                                </div>
+                                <div style={{display: "flex", flexDirection: "row", justifyContent: "space-between", width: "12rem", maxWidth: "100%"}}>
+                                    <ExternalLink text="repo" href="https://github.com/hharris56/MiniPixel" />
+                                    <ExternalLink text="website" href="https://mini-pixel.vercel.app" />
+                                </div>
+                                
+                            </div>
+                            <div className='project-content'>
+                                <iframe 
+                                    src="https://mini-pixel.vercel.app" 
+                                    style={{width: "20rem", maxWidth: "100%", aspectRatio: "1 / 1", marginBottom: "1rem"}}
+                                />
+                                <p style={{width: "30rem", maxWidth: "100%"}}>I've wanted to try out tailwind for a while and figured a small-scale dynamically rendered web app like this would be a good testing ground.</p>
+                            </div>
+                            <div className='project-tool-container'>
+                                <div className='project-tool'>TypeScript</div>
+                                <div className='project-tool'>TailwindCSS</div>
+                            </div>
                         </div>
                     </div>
                 </div>
