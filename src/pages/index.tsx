@@ -2,7 +2,7 @@ import Head from 'next/head'
 import NavBar from '@/components/Navbar/NavBar'
 import TechStack from '@/components/TechStack/TechStack'
 import Background from '@/components/Background/Background'
-import ExternalLink from '@/components/externalLink'
+import ExternalLink from '@/components/ExternalLink'
 
 export default function Home() {
   return (
@@ -87,7 +87,53 @@ export default function Home() {
         <div className="panel">
           <a className="anchor" id="projects"></a>
           <div className="panel-title">Projects</div>
-          <div className="panel-content">
+          <div className="panel-content vertical-panel-content">
+          <div
+              key="jwt-decoded"
+              style={{ width: '60rem', textAlign: 'center', marginBottom: '2rem' }}
+              className="pane">
+              <div className="project-info">
+                <div style={{ marginBottom: '0.5rem' }}>
+                  <h1>JWT Decoded</h1>
+                  <i>April 2025</i>
+                </div>
+                <div
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                    width: '12rem',
+                    maxWidth: '100%',
+                  }}>
+                  <ExternalLink
+                    text="repo"
+                    href="https://github.com/hharris56/jwt-decoder"
+                  />
+                  <ExternalLink
+                    text="website"
+                    href="https://jwt-decoder-snowy.vercel.app"
+                  />
+                </div>
+              </div>
+              <div className="project-content">
+                <iframe
+                  src="https://jwt-decoder-snowy.vercel.app"
+                  style={{
+                    width: '20rem',
+                    maxWidth: '100%',
+                    aspectRatio: '1 / 1',
+                    marginBottom: '1rem',
+                  }}
+                />
+                <p style={{ width: '30rem', maxWidth: '100%' }}>
+                  A super bare bones JWT decoder build using SvelteKit and Tailwind CSS. I often use online tools like this during API development to verify my token contents, however I dislike the lack of syntax highlighting found on <a href='https://www.jwt.ms/' target='_blank'><u>jwt.ms</u></a> and the over-zealous branding of <a href='https://www.jwt.io/'><u>jwt.io</u></a> so I decided to write my own.
+                </p>
+              </div>
+              <div className="project-tool-container">
+                <div className="project-tool">SvelteKit</div>
+                <div className="project-tool">TailwindCSS</div>
+              </div>
+            </div>
             <div
               key="mini-pixel"
               style={{ width: '60rem', textAlign: 'center' }}
@@ -126,9 +172,7 @@ export default function Home() {
                   }}
                 />
                 <p style={{ width: '30rem', maxWidth: '100%' }}>
-                  I've been wanting to try out tailwind for a while now and 
-                  figured a small-scale dynamically-rendered web app like this 
-                  would be make for a good testing ground.
+                  A rudimentary pixel editor that supports canvas size from 3x3 to 20x20 with full color control. Pixels are dynamically scaled and rendered which was an excellent way to learn the ins and outs of tailwind CSS. Developed with vanilla typscript for minimal overhead.
                 </p>
               </div>
               <div className="project-tool-container">
