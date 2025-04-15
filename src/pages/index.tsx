@@ -125,8 +125,8 @@ export default function Home() {
                     marginBottom: '1rem',
                   }}
                 />
-                <p style={{ width: '30rem', maxWidth: '100%' }}>
-                  A super bare bones JWT decoder build using SvelteKit and Tailwind CSS. I often use online tools like this during API development to verify my token contents, however I dislike the lack of syntax highlighting found on <a href='https://www.jwt.ms/' target='_blank'><u>jwt.ms</u></a> and the over-zealous branding of <a href='https://www.jwt.io/'><u>jwt.io</u></a> so I decided to write my own.
+                <p style={{ width: '30rem', maxWidth: '100%', textAlign: 'justify' }}>
+                  A bare bones JWT decoder built using SvelteKit and Tailwind CSS. I often use online tools like this during API development to verify my token contents, however I dislike the lack of syntax highlighting found on <a href='https://www.jwt.ms/' target='_blank'><u>jwt.ms</u></a> and the over-zealous branding of <a href='https://www.jwt.io/'><u>jwt.io</u></a> so I created my own.
                 </p>
               </div>
               <div className="project-tool-container">
@@ -171,8 +171,8 @@ export default function Home() {
                     marginBottom: '1rem',
                   }}
                 />
-                <p style={{ width: '30rem', maxWidth: '100%' }}>
-                  A rudimentary pixel editor that supports canvas size from 3x3 to 20x20 with full color control. Pixels are dynamically scaled and rendered which was an excellent way to learn the ins and outs of tailwind CSS. Developed with vanilla typscript for minimal overhead.
+                <p style={{ width: '30rem', maxWidth: '100%', textAlign: 'justify' }}>
+                  A rudimentary pixel editor that supports canvas sizing and full color control. Pixels are dynamically scaled and rendered which was an excellent way to learn the ins and outs of tailwind CSS. Developed with vanilla typscript for minimal overhead.
                 </p>
               </div>
               <div className="project-tool-container">
