@@ -2,7 +2,7 @@ import Head from 'next/head'
 import NavBar from '@/components/Navbar/NavBar'
 import TechStack from '@/components/TechStack/TechStack'
 import Background from '@/components/Background/Background'
-import ExternalLink from '@/components/ExternalLink'
+import ExternalLink from '@/components/externalLink'
 
 export default function Home() {
   return (
