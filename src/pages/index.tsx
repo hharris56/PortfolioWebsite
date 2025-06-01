@@ -88,51 +88,97 @@ export default function Home() {
           <a className="anchor" id="projects"></a>
           <div className="panel-title">Projects</div>
           <div className="panel-content vertical-panel-content">
-          <div
-              key="jwt-decoded"
-              style={{ width: '60rem', textAlign: 'center', marginBottom: '2rem' }}
-              className="pane">
-              <div className="project-info">
-                <div style={{ marginBottom: '0.5rem' }}>
-                  <h1>JWT Decoded</h1>
-                  <i>April 2025</i>
+            <div 
+                key="u-do list"
+                style={{ width: '60rem', textAlign: 'center', marginBottom: '2rem' }}
+                className="pane">
+                <div className="project-info">
+                  <div style={{ marginBottom: '0.5rem' }}>
+                    <h1>U-Do List</h1>
+                    <i>May 2025</i>
+                  </div>
+                  <div
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'row',
+                      justifyContent: 'space-between',
+                      width: '12rem',
+                      maxWidth: '100%',
+                    }}>
+                    <ExternalLink
+                      text="repo"
+                      href="https://github.com/hharris56/udo-list"
+                    />
+                    <ExternalLink
+                      text="website"
+                      href="https://udo-list.vercel.app/"
+                    />
+                  </div>
                 </div>
-                <div
-                  style={{
-                    display: 'flex',
-                    flexDirection: 'row',
-                    justifyContent: 'space-between',
-                    width: '12rem',
-                    maxWidth: '100%',
-                  }}>
-                  <ExternalLink
-                    text="repo"
-                    href="https://github.com/hharris56/jwt-decoder"
+                <div className="project-content">
+                  <iframe
+                    src="https://udo-list.vercel.app/"
+                    style={{
+                      width: '20rem',
+                      maxWidth: '100%',
+                      aspectRatio: '1 / 1',
+                      marginBottom: '1rem',
+                    }}
                   />
-                  <ExternalLink
-                    text="website"
-                    href="https://jwt-decoder-snowy.vercel.app"
-                  />
+                  <p style={{ width: '30rem', maxWidth: '100%', textAlign: 'justify' }}>
+                    A novel twist on the classic 'to-do list' project. Aside from the basic creating and checking-off functionality, users can also send items to a shared database and pull random items to their own list. When an item is 'pulled down' it is saved to the browser's local storage and removed from the database so each item is truly unique, exisitng in only one place at any given time.
+                  </p>
                 </div>
-              </div>
-              <div className="project-content">
-                <iframe
-                  src="https://jwt-decoder-snowy.vercel.app"
-                  style={{
-                    width: '20rem',
-                    maxWidth: '100%',
-                    aspectRatio: '1 / 1',
-                    marginBottom: '1rem',
-                  }}
-                />
-                <p style={{ width: '30rem', maxWidth: '100%', textAlign: 'justify' }}>
-                  A bare bones JWT decoder built using SvelteKit and Tailwind CSS. I often use online tools like this during API development to verify my token contents, however I dislike the lack of syntax highlighting found on <a href='https://www.jwt.ms/' target='_blank'><u>jwt.ms</u></a> and the over-zealous branding of <a href='https://www.jwt.io/'><u>jwt.io</u></a> so I created my own.
-                </p>
-              </div>
-              <div className="project-tool-container">
-                <div className="project-tool">SvelteKit</div>
-                <div className="project-tool">TailwindCSS</div>
-              </div>
+                <div className="project-tool-container">
+                  <div className="project-tool">ReactJS</div>
+                  <div className="project-tool">Supabase</div>
+                </div>
+            </div>
+            <div
+                key="jwt-decoded"
+                style={{ width: '60rem', textAlign: 'center', marginBottom: '2rem' }}
+                className="pane">
+                <div className="project-info">
+                  <div style={{ marginBottom: '0.5rem' }}>
+                    <h1>JWT Decoded</h1>
+                    <i>April 2025</i>
+                  </div>
+                  <div
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'row',
+                      justifyContent: 'space-between',
+                      width: '12rem',
+                      maxWidth: '100%',
+                    }}>
+                    <ExternalLink
+                      text="repo"
+                      href="https://github.com/hharris56/jwt-decoder"
+                    />
+                    <ExternalLink
+                      text="website"
+                      href="https://jwt-decoder-snowy.vercel.app"
+                    />
+                  </div>
+                </div>
+                <div className="project-content">
+                  <iframe
+                    src="https://jwt-decoder-snowy.vercel.app"
+                    style={{
+                      width: '20rem',
+                      maxWidth: '100%',
+                      aspectRatio: '1 / 1',
+                      marginBottom: '1rem',
+                    }}
+                  />
+                  <p style={{ width: '30rem', maxWidth: '100%', textAlign: 'justify' }}>
+                    A bare bones JWT decoder built using SvelteKit and Tailwind CSS. I often use online tools like this during API development to verify my token contents, however I dislike the lack of syntax highlighting found on <a href='https://www.jwt.ms/' target='_blank'><u>jwt.ms</u></a> and the over-zealous branding of <a href='https://www.jwt.io/'><u>jwt.io</u></a> so I created my own.
+                  </p>
+                </div>
+                <div className="project-tool-container">
+                  <div className="project-tool">SvelteKit</div>
+                  <div className="project-tool">TailwindCSS</div>
+                </div>
             </div>
             <div
               key="mini-pixel"
